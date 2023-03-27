@@ -59,9 +59,7 @@
       const newMeal = generateMeal();
       mealTitle.textContent = newMeal.name;
       mealImg.src = newMeal.imgSrc;
-      // 調整 add-new-meal 元素的高度
-      const addNewMealHeight = addNewMeal.clientHeight;
-      mealGenerator.style.minHeight = addNewMealHeight + 'px';
+      
     }, 50); 
     
   });

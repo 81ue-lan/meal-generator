@@ -73,14 +73,17 @@ button,a{
     margin: 0 .3rem;
 }
 .meal-img{
+    box-sizing: border-box;
     width: 200px;
+    height: 200px;
     margin: 1rem auto;
 }
 .meal-img img{
     width: 100%;
+    height: 100%;
     vertical-align: middle;
     object-fit: contain;
-    aspect-ratio: 3/2;
+    /* aspect-ratio: 3/2; */
 }
 .meal-title{
     text-align: center;

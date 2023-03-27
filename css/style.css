@@ -8,11 +8,35 @@
     --dark-green: #1FB240;
     --blue: #84AEE9;
     --dark-blue: #647EA2;
+    --purple: #B194F3;
+    --light-purple: #F404F3;
     cursor: url(https://cur.cursors-4u.net/food/foo-5/foo459.ani), url(https://cur.cursors-4u.net/food/foo-5/foo459.png), auto !important;
 }
+button,a{
+    cursor: url(https://cur.cursors-4u.net/food/foo-5/foo449.ani), url(https://cur.cursors-4u.net/food/foo-5/foo449.png), auto !important;
+}
+.fa-solid{
+    color: var(--black);
+}
+.generator-bg{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid var(--dark-blue);
+    border-radius: 0 0 30px 30px;
+}
+.generator-bg::before{
+    content: '';
+    position: absolute;
+    border: 3px solid var(--dark-blue);
+    border-radius: 30px 30px 0 0;
+    background: linear-gradient(var(--lighter-green), var(--light-green), var(--green));
 
+}
 .main-title{
     padding-left: 1rem;
+    margin-top: 1rem;
     text-indent: 1rem;
     font-size: 36px;
     font-weight: 600;
@@ -23,26 +47,15 @@
     background: linear-gradient(var(--yellow), var(--white));
 }
 .meal-generator{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 594px;
     margin: 50px auto 100px;
     padding-bottom: 50px;
-    border: 3px solid var(--dark-blue);
-    border-radius: 0 0 30px 30px;
     background: linear-gradient(var(--blue), var(--white), var(--white),var(--blue));
 }
-.meal-generator::before{
-    content: '';
-    position: absolute;
+.meal-generator::before{  
     top: -35px;
     width: 594px;
-    height: 35px;
-    border: 3px solid var(--dark-blue);
-    border-radius: 30px 30px 0 0;
-    background: linear-gradient(var(--lighter-green), var(--light-green), var(--green));
+    height: 35px;  
 }
 
 .meal-top{
@@ -67,7 +80,7 @@
     width: 100%;
     vertical-align: middle;
     object-fit: contain;
-    aspect-ratio: 1;
+    aspect-ratio: 3/2;
 }
 .meal-title{
     text-align: center;
@@ -89,13 +102,66 @@
     box-shadow: 3px 3px #555;
     font-size: 18px;
     font-weight: 600;
-   cursor: url(https://cur.cursors-4u.net/food/foo-5/foo449.ani), url(https://cur.cursors-4u.net/food/foo-5/foo449.png), auto !important;
     transition: .5s;
 }
 .btn:hover{ background-color: var(--green) }
 .btn-start{ background-color: var(--yellow); }
 .btn-add{ background-color: var(--white) }
 
+.add-new-meal{
+    display: none;
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+	height: 100%;
+	top: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+.new-meal{
+    width: 296px;
+    padding: 25px 0;
+    margin: auto;
+    background: linear-gradient(var(--purple), var(--white),var(--purple));
+}
+.new-meal::before{
+    width: 296px;
+    height: 20px;
+    top: -20px;
+}
+.label-meal-title{
+    margin-bottom: .5rem;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+}
+.input-meal-title{
+    box-sizing: border-box;
+    width: 150px;
+    padding: .3rem .5rem;
+    border: 2px solid #333;
+    border-radius: 100px;
+    font-size: 12px;
+}
+.input-meal-title:focus{
+    outline: none;
+}
+.btn-close{
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    border: none;
+    background-color: inherit;
+}
+.fa-xmark{
+    transition: .3s;
+}
+.btn-close:hover .fa-xmark{
+    color: var(--blue);
+}
+.btn-plus{
+    width: 50px;
+    padding: 5px 0;
+}
 @media (max-width: 704px) {
     .main-title{
         font-size: 26px;
@@ -121,7 +187,7 @@
     .meal-btn{
         width: 50%;
     }
-    .btn{
+    .btn-add,.btn-start{
         width: 80px;
         font-size: 16px;
     }
@@ -144,7 +210,7 @@
     .meal-btn{
         width: 50%;
     }
-    .btn{
+    .btn-add,.btn-start{
         width: 50px;
         font-size: 14px;
         padding: 8px 0;
@@ -191,6 +257,21 @@
 .footer-img-item img{
     width: 100%;
     vertical-align: middle;
+}
+.copyright{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--green);
+}
+.btn-ins{
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+.btn-ins a{
+    color: var(--green);
+    font-size: 18px;
 }
 @media (max-width: 704px){
     .footer-img-item{
